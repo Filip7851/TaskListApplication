@@ -11,13 +11,24 @@ button:hover {
     width: 100%;
 }
 
-.link {
+.top {
+    margin-top: 40px;
+}
+
+.link, .link:visited {
     color: #d2d1d1;
 }
 
-.link:hover {
-    text-decoration: none;
-    color: white;
+.active {
+    color: white !important;
+}
+
+.link:hover, .active:hover {
+    color: white !important;
+}
+
+.link, .link:hover, .link:active, .link:visited, .active, .active:hover, .active:active, .active:visited {
+    text-decoration: none !important;
 }
 
 #myFooter {

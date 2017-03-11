@@ -3,19 +3,12 @@
 @section('title')Register an Account
 @endsection
 
-<style>
-    .top {
-        margin-top: 40px;
-    }
-</style>
-
 @section('content')
     <div class="container">
         <form action="{{ route('register') }}" method="POST" style="padding: 30px;" class="top" autocomplete="off">
             <div class="text-center">
                 <h1>Register New Account</h1>
             </div>
-           
             
             <div class="form-group {{ $errors->has('username') ? 'has-danger' : '' }}">
                 <label for="username">Username</label>
@@ -62,18 +55,14 @@
                 @endif
             </div>
             
-            <div class="form-group {{ $errors->has('confirm_password') ? 'has-danger' : '' }}">
+            <div class="form-group {{ $errors->first('password') == 'Password\'s do not match.' ? 'has-danger' : '' }}">
                 <label for="confirm_password">Confirm Password</label>
-                <input type="password" class="form-control {{ $errors->has('confirm_password') ? 'form-control-danger' : '' }}" id="confirm_password" name="confirm_password">
-                
-                @if($errors->has('confirm_password'))
-                    <div class="form-control-feedback">
-                        {{ $errors->first('confirm_password') }}
-                    </div>
-                @endif
+                <input type="password" class="form-control {{ $errors->first('password') == 'Password\'s do not match.' ? 'form-control-danger' : '' }}" id="password_confirmation" name="password_confirmation">
             </div>
             
-            <button type="submit" class="btn btn-primary">Register Account</button>
+            <div class="text-right">
+                <button type="submit" class="btn btn-primary">Register Account</button>
+            </div>
             
             {{ csrf_field() }}
         </form>
