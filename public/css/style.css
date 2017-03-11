@@ -11,12 +11,10 @@ button:hover {
     width: 100%;
 }
 
-.link {
+.link, .link:visited {
     color: #d2d1d1;
 }
 
-.link:hover {
-    text-decoration: none;
     color: white;
 }
 
