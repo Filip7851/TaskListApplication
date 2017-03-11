@@ -11,10 +11,6 @@ button:hover {
     width: 100%;
 }
 
-.top {
-    margin-top: 40px;
-}
-
 .link, .link:visited {
     color: #d2d1d1;
 }
@@ -29,6 +25,42 @@ button:hover {
 
 .link, .link:hover, .link:active, .link:visited, .active, .active:hover, .active:active, .active:visited {
     text-decoration: none !important;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1366px) {
+    .btn_small {
+        display: inline-block;
+        float: right;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .btn_small {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .display-5 {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .reg_acc {
+        font-size: 2em;
+    }
+}
+
+.signin {
+    width: 330px;
+    padding: 15px;
+    margin: 50px auto;
+}
+
+.clear {
+    clear: both;
 }
 
 #myFooter {

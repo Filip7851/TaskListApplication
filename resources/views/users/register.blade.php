@@ -5,9 +5,9 @@
 
 @section('content')
     <div class="container">
-        <form action="{{ route('register') }}" method="POST" style="padding: 30px;" class="top" autocomplete="off">
+        <form action="{{ route('register') }}" method="POST" style="padding: 60px" autocomplete="off">
             <div class="text-center">
-                <h1>Register New Account</h1>
+                <h1 class="reg_acc">Register New Account</h1>
             </div>
             
             <div class="form-group {{ $errors->has('username') ? 'has-danger' : '' }}">
@@ -61,7 +61,7 @@
             </div>
             
             <div class="text-right">
-                <button type="submit" class="btn btn-primary">Register Account</button>
+                <button type="submit" class="btn btn-primary btn_small">Register</button>
             </div>
             
             {{ csrf_field() }}

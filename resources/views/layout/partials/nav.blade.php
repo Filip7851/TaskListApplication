@@ -16,9 +16,10 @@
                 <a class="nav-link" href="#">Contact</a>
             </li>
         </ul>
-        <span class="navbar-text">
+        
+        <div class="navbar-text">
             <a href="{{ route('register') }}" class="{{ Request::is('register') ? 'active' : 'link' }}"><i class="fa fa-user fa-lg" aria-hidden="true"></i> Sign Up</a>
-            <a href="#" class="left-padd link"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i> Sign In</a>
-        </span>
+            <a href="{{ route('login.show') }}" class="left-padd {{ Request::is('login') ? 'active' : 'link' }}"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i> Sign In</a>
+        </div>
     </div>
 </nav>
