@@ -12,18 +12,26 @@
             <div class="col-sm-4">
                 <form action="/" method="post">
                     <h5>Quick Login</h5>
-                    <div class="form-group">
-                        <input type="text" class="form-control form-control-danger" placeholder="Username">
-                        <!-- <div class="form-control-feedback">Sorry, that username is incorrect.</div> -->
-                    </div>
-                
-                    <div class="form-group">
-                        <input type="password" class="form-control form-control-danger" placeholder="Password">
-                        <!-- <div class="form-control-feedback">Sorry, that password is incorrect.</div> -->
-                    </div>
-                
-                    <div class="form-group text-right">
-                        <button type="submit" class="btn btn-success">Login</button>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-danger" placeholder="Username">
+                                <!-- <div class="form-control-feedback">Sorry, that username is incorrect.</div> -->
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <input type="password" class="form-control form-control-danger" placeholder="Password">
+                                <!-- <div class="form-control-feedback">Sorry, that password is incorrect.</div> -->
+                            </div>
+                        </div>
+                        
+                        <!-- <div class="col-sm-12 col-md-4"> -->
+                            <div class="form-group text-right">
+                                <button type="submit" class="btn btn-success">Login</button>
+                            </div>
+                        <!-- </div> -->
                     </div>
                     
                     {{ csrf_field() }}
