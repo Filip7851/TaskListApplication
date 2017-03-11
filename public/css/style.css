@@ -31,6 +31,32 @@ button:hover {
     text-decoration: none !important;
 }
 
+@media screen and (min-width: 769px) and (max-width: 1366px) {
+    .btn_small {
+        display: inline-block;
+        float: right;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .btn_small {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .display-5 {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .reg_acc {
+        font-size: 2em;
+    }
+}
+
 #myFooter {
     background-color: #3a3f46;
     color: white;
