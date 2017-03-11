@@ -4,6 +4,14 @@
 @endsection
 
 @section('content')
+    @if(session()->has('registered'))
+        <!-- Displays the session message, and then flushes (clears) all sessions -->
+        <br><br><br>
+        <div class="alert alert-success">
+            <strong>Successfully created new account. You may now <a href="#">login.</a></strong>
+            {{ session()->flush() }}
+        </div>
+    @endif
     <div class="jumbotron">
         <div class="text-center">
             <h1 class="display-5">The Task List Application</h1>

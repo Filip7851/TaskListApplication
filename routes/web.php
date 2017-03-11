@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', function() {
-    return view('index');
-})->name('home');
+Route::get('/', 'UserAuth\HomeController@index')->name('home');
 
 // UserController
-Auth::routes();
+//Auth::routes();
 
-Route::get('/home', 'HomeController@index');
-
-Route::get('/register', 'UserAuth\RegisterController@showRegistrationForm')->name('register.show');
-Route::post('/register', 'UserAuth\RegisterController@register')->name('register');
+Route::group(['prefix' => '/register'], function() {
+    // displays the registration form on /register
+    Route::get('/', 'UserAuth\RegisterController@showRegistrationForm')->name('register.show');
+    // sends post request to /register
+    Route::post('/', 'UserAuth\RegisterController@register')->name('register');
+});

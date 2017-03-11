@@ -57,10 +57,12 @@
             
             <div class="form-group {{ $errors->first('password') == 'Password\'s do not match.' ? 'has-danger' : '' }}">
                 <label for="confirm_password">Confirm Password</label>
-                <input type="password" class="form-control {{ $errors->first('password') == 'Password\'s do not match.' ? 'form-control-danger' : '' }}" id="password_confirmation" name="confirm_password">
+                <input type="password" class="form-control {{ $errors->first('password') == 'Password\'s do not match.' ? 'form-control-danger' : '' }}" id="password_confirmation" name="password_confirmation">
             </div>
             
-            <button type="submit" class="btn btn-primary">Register Account</button>
+            <div class="text-right">
+                <button type="submit" class="btn btn-primary">Register Account</button>
+            </div>
             
             {{ csrf_field() }}
         </form>
