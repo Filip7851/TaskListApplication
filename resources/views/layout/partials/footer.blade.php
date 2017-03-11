@@ -10,8 +10,8 @@
                 </ul>
             </div>
             <div class="col-sm-4">
-                <form action="#" method="post">
-                <h5>Quick Login</h5>
+                <form action="/" method="post">
+                    <h5>Quick Login</h5>
                     <div class="form-group">
                         <input type="text" class="form-control form-control-danger" placeholder="Username">
                         <!-- <div class="form-control-feedback">Sorry, that username is incorrect.</div> -->
@@ -25,6 +25,8 @@
                     <div class="form-group text-right">
                         <button type="submit" class="btn btn-success">Login</button>
                     </div>
+                    
+                    {{ csrf_field() }}
                 </form>
             </div>
             <div class="col-sm-4 info pull-sm-right">
