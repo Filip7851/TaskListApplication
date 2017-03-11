@@ -11,13 +11,16 @@ button:hover {
     width: 100%;
 }
 
+.top {
+    margin-top: 40px;
+}
+
 .link, .link:visited {
     color: #d2d1d1;
 }
 
 .active {
-    font-weight: bold;
-    color: green !important;
+    color: white !important;
 }
 
 .link:hover, .active:hover {
