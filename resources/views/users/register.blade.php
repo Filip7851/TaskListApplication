@@ -11,7 +11,6 @@
 
 @section('content')
     <div class="container">
-        
         <form action="{{ route('register') }}" method="POST" style="padding: 30px;" class="top" autocomplete="off">
             <div class="text-center">
                 <h1>Register New Account</h1>
