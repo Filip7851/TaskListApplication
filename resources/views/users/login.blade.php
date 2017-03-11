@@ -24,18 +24,14 @@
                 </div>
             </div>
             
+            {{ csrf_field() }}
+                
             @if(session()->has('logged_in'))
-                <div class="clear"></div>
                 <script>
-                    swal({
-                        title: 'Good Job',
-                        type: 'success'
-                    });
+                    swal('Successfully logged in', 'You may now start adding the tasks!', 'success');
                 </script>
                 {{ session()->flush() }}
             @endif
-            
-            {{ csrf_field() }}
         </form>
     </div>
 @endsection

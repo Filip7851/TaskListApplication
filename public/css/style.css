@@ -27,6 +27,17 @@ button:hover {
     text-decoration: none !important;
 }
 
+.signin {
+    width: 330px;
+    padding: 15px;
+    margin: 50px auto;
+}
+
+.top {
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+
 @media screen and (min-width: 769px) and (max-width: 1366px) {
     .btn_small {
         display: inline-block;
@@ -47,20 +58,13 @@ button:hover {
     }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (min-width: 0px) and (max-width: 540px) {
     .reg_acc {
         font-size: 2em;
     }
-}
-
-.signin {
-    width: 330px;
-    padding: 15px;
-    margin: 50px auto;
-}
-
-.clear {
-    clear: both;
+    .signin {
+        width: 100%;
+    }
 }
 
 #myFooter {
@@ -127,23 +131,6 @@ button:hover {
     text-decoration: none;
 }
 
-#myFooter .social-icons {
-    float:right;
-}
-
-
-#myFooter .facebook:hover {
-    color: #0077e2;
-}
-
-#myFooter .google:hover {
-    color: #ef1a1a;
-}
-
-#myFooter .twitter:hover {
-    color: #00aced;
-}
-
 @media screen and (max-width: 767px) {
     #myFooter {
         text-align: center;
@@ -152,32 +139,4 @@ button:hover {
     #myFooter .info{
         text-align: center;
     }
-}
-
-
-
-/* CSS used for positioning the footers at the bottom of the page. */
-/* You can remove this. */
-
-html{
-    height: 100%;
-}
-
-body{
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    -webkit-flex-direction: column;
-    height: 100%;
-}
-
-.content{
-   flex: 1 0 auto;
-   -webkit-flex: 1 0 auto;
-   min-height: 200px;
-}
-
-#myFooter{
-   flex: 0 0 auto;
-   -webkit-flex: 0 0 auto;
 }
