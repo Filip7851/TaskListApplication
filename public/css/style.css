@@ -11,10 +11,6 @@ button:hover {
     width: 100%;
 }
 
-.top {
-    margin-top: 40px;
-}
-
 .link, .link:visited {
     color: #d2d1d1;
 }
@@ -55,6 +51,16 @@ button:hover {
     .reg_acc {
         font-size: 2em;
     }
+}
+
+.signin {
+    width: 330px;
+    padding: 15px;
+    margin: 50px auto;
+}
+
+.clear {
+    clear: both;
 }
 
 #myFooter {

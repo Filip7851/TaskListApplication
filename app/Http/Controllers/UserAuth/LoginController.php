@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers\UserAuth;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+
 class LoginController extends Controller
-{
-    public function login(Request $request) {
-        // validate data
-        
+{   
+    public function index() {
+        return view('users.login');
+    }
+    
+    public function login() {
+        session()->flash('logged_in', 'Successfully logged in.');
+        return redirect()->back();
     }
 }

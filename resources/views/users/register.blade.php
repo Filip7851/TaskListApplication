@@ -5,7 +5,7 @@
 
 @section('content')
     <div class="container">
-        <form action="{{ route('register') }}" method="POST" style="padding: 30px;" class="top" autocomplete="off">
+        <form action="{{ route('register') }}" method="POST" style="padding: 60px" autocomplete="off">
             <div class="text-center">
                 <h1 class="reg_acc">Register New Account</h1>
             </div>

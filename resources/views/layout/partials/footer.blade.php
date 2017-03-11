@@ -4,8 +4,8 @@
             <div class="col-xs-12 col-sm-4 text-center">
                 <h5>Get started</h5>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Sign up</a></li>
+                    <li><a href="{{ route('home') }}">Home</a></li>
+                    <li><a href="{{ route('register') }}">Sign up</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>

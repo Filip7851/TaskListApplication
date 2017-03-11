@@ -16,7 +16,10 @@ Route::group(['prefix' => '/'], function() {
     Route::post('/', 'UserAuth\LoginController@login');
 });
 
-
+Route::group(['prefix' => '/login'], function() {
+    Route::get('/', 'UserAuth\LoginController@index')->name('login.show');
+    Route::post('/', 'UserAuth\LoginController@login')->name('login');
+});
 
 // UserController
 //Auth::routes();
