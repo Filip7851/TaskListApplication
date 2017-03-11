@@ -6,7 +6,7 @@
 @section('content')
     <div class="jumbotron">
         <div class="text-center">
-            <h1 class="display-5">Task List Application</h1>
+            <h1 class="display-5">The Task List Application</h1>
             <p>This website is simple project which facilitates user authentication and CRUD.</p>
             <p>To get you started why don't you <a href="">make an account</a>.</p>
             <p>Already have an account? <a href="#">Sign in here</a>.</p>
