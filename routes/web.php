@@ -13,12 +13,13 @@
 
 Route::group(['prefix' => '/'], function() {
     Route::get('/', 'UserAuth\HomeController@index')->name('home'); 
-    Route::post('/', 'UserAuth\LoginController@login');
 });
 
+Route::get('/logout', 'UserAuth\LoginController@logout')->name('logout');
+
 Route::group(['prefix' => '/login'], function() {
-    Route::get('/', 'UserAuth\LoginController@index')->name('login.show');
     Route::post('/', 'UserAuth\LoginController@login')->name('login');
+    Route::get('/', 'UserAuth\LoginController@showLoginPage')->name('login.show');
 });
 
 // UserController

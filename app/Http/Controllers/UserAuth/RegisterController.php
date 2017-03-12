@@ -8,6 +8,10 @@ use App\Http\Controllers\Controller;
 
 class RegisterController extends Controller
 {
+    public function __construct() {
+        $this->middleware('guest:web');
+    }
+    
     public function showRegistrationForm() {
         return view('users.register');
     }

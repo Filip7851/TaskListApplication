@@ -1,4 +1,4 @@
-<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+<nav class="custom navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -18,8 +18,13 @@
         </ul>
         
         <div class="navbar-text">
-            <a href="{{ route('register') }}" class="{{ Request::is('register') ? 'active' : 'link' }}"><i class="fa fa-user fa-lg" aria-hidden="true"></i> Sign Up</a>
-            <a href="{{ route('login.show') }}" class="left-padd {{ Request::is('login') ? 'active' : 'link' }}"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i> Sign In</a>
+            @if(!Auth::guard('web')->check())
+                <a href="{{ route('register') }}" class="{{ Request::is('register') ? 'active' : 'link' }}"><i class="fa fa-user fa-lg" aria-hidden="true"></i> Sign Up</a>
+                <a href="{{ route('login.show') }}" class="left-padd {{ Request::is('login') ? 'active' : 'link' }}"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i> Sign In</a>
+            @else
+                <span>Welcome, <strong>{{ Auth::guard()->user()->username }}</strong></span>
+                <a href="{{ route('logout') }}" class="left-padd link"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+            @endif
         </div>
     </div>
 </nav>

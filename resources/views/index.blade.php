@@ -12,6 +12,10 @@
             {{ session()->flush() }}
         </div>
     @endif
+    @if(Auth::check())
+        <strong>LOGGED IN</strong>
+    @endif
+    
     <div class="jumbotron">
         <div class="text-center">
             <h1 class="display-5">The Task List Application</h1>
@@ -27,4 +31,16 @@
             </p>
         </div>
     </div>
+    
+    @if(session()->has('logged_in'))
+        <script>
+            swal('Successfully logged in', 'You may now start adding the tasks!', 'success');
+        </script>
+        {{ session()->flush() }}
+    @elseif(session()->has('logged_out'))
+        <script>
+            swal('Logged out.', 'Successfully logged out. Thank you.', 'success');
+        </script>
+        {{ session()->flush() }}
+    @endif
 @endsection

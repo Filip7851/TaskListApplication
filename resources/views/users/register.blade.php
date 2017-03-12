@@ -64,6 +64,8 @@
                 <button type="submit" class="btn btn-primary btn_small">Register Account</button>
             </div>
             
+            <div class="clear"></div>
+            
             {{ csrf_field() }}
         </form>
     </div>
