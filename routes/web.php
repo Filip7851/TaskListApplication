@@ -28,3 +28,9 @@ Route::group(['prefix' => '/register'], function() {
     // sends post request to /register
     Route::post('/', 'UserAuth\RegisterController@register')->name('register');
 });
+
+Route::group(['prefix' => '/tasks'], function() {
+    Route::get('/', function() {
+        dd('HERE');
+    })->name('tasks.add'); 
+});
