@@ -22,9 +22,6 @@ Route::group(['prefix' => '/login'], function() {
     Route::get('/', 'UserAuth\LoginController@showLoginPage')->name('login.show');
 });
 
-// UserController
-//Auth::routes();
-
 Route::group(['prefix' => '/register'], function() {
     // displays the registration form on /register
     Route::get('/', 'UserAuth\RegisterController@showRegistrationForm')->name('register.show');

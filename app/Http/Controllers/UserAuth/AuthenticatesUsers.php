@@ -66,7 +66,7 @@ trait AuthenticatesUsers {
     }
     
     protected function attemptLogin(Request $request) {
-        return $this->guard()->attempt($this->credentials($request), $request->has('remember'));
+        return $this->guard()->attempt($this->credentials($request));
     }
     
     protected function authenticated(Request $request, $user) {
@@ -75,10 +75,6 @@ trait AuthenticatesUsers {
     
     protected function credentials(Request $request) {
         return $request->only('username', 'password');
-    }
-    
-    protected function sendLoginResponse(Request $request) {
-        $request->session()->regenerate();
     }
     
     protected function guard() {

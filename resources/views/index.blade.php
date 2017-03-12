@@ -8,20 +8,22 @@
         <!-- Displays the session message, and then flushes (clears) all sessions -->
         <br><br><br>
         <div class="alert alert-success">
-            <strong>Successfully created new account. You may now <a href="#">login.</a></strong>
+            <strong>Successfully created new account. You may now <a href="{{ route('login.show') }}">login.</a></strong>
             {{ session()->flush() }}
         </div>
-    @endif
-    @if(Auth::check())
-        <strong>LOGGED IN</strong>
     @endif
     
     <div class="jumbotron">
         <div class="text-center">
             <h1 class="display-5">The Task List Application</h1>
             <p>This website is simple project which facilitates user authentication and CRUD.</p>
-            <p>To get you started why don't you <a href="">make an account</a>.</p>
-            <p>Already have an account? <a href="#">Sign in here</a>.</p>
+            
+            @if(!Auth::check())
+                <p>To get you started why don't you <a href="{{ route('register.show') }}">make an account</a>.</p>
+                <p>Already have an account? <a href="{{ route('login.show') }}">Sign in here</a>.</p>
+            @else
+                <p>To start adding the tasks click <a href="{{ route('tasks.add') }}">here</a>.</p>
+            @endif
             
             <hr class="my-5">
             
